@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="keywords" content="天然，博客，前端"/>
+    <meta name="description" content="天然，博客，个人网站，前端，web前端，移动前端"/>
+    <script type="text/javascript" src="jquery-1.8.3.js"></script>
+    <script type="text/javascript" src="jquery.mytips.js"></script>
+    <link type="text/css" rel="stylesheet" href="skins/mytips.css"/>
+    <title>实验/Demo | 天然</title>
+    <style type="text/css">
+        body{ font-family: 'Microsoft YaHei';}
+        ul li{ list-style: none;}
+        .content{
+            margin: 0 auto;
+            padding-top: 100px;
+        }
+        .content ul li {
+            padding: 20px 5px;
+        }
+        .content ul li span{
+            padding: 5px;
+        }
+        .content ul li input{
+             padding: 10px;
+             outline: none;
+             border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body style="background: #ebebeb;">
+    <div class="content">
+       <ul>
+           <li><span>tips Top:</span><input type="text" class="inp tips1"/></li>
+           <li><span>tips Left:</span><input type="text" class="inp tips2"/></li>
+       </ul>
+    </div>
+<script type="text/javascript">
+    $(function(){
+       $(".tips1").on('focus', function(){
+           $(this).mytips({msg: '提示在上面', position : 'mytipstop',timeout: 3*1000});
+       });
+        $(".tips2").on('focus', function(){
+            $(this).mytips({msg: '提示在左边', position : 'mytipsleft',timeout: 3*1000});
+        });
+    });
+</script>
+</body>
+</html>
